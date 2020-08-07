@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h3>javaScript Object Notation</h3>
+    <h1>How internet works, DNS server, Hosting server, database</h1>
+    <h2>COMPUTER TO IP/DNS TO DATA CENTER/INTERNET SEVICE TO WITH CABLE/BROAD BRAND TO COMPUTER OR BY TOWER TO MOBILE</h2>
+    <h2>WHO USE COMPUTER CALL CLIENT AND WHO SERV THE INTER CALL SERVER</h2>
+    <h2>SERVER RELOAD WEBSITES AND ALL OF YOUR POST LIKE PHOTO, VIDEO IN DATA CENTER</h2>
+    <h2>IP : INTERNET PROTOCOL</h2>
+    <h2>DNS : DOMAIN NAME SYSTEM</h2>
+    <h2>API : APPLICATION PROGRAMMING INTERFACE</h2>  */ API EXCHANGE DATA FROM CLIENT BY POST OR GET/*
+    <h2>GET: WHEN YOU TAKE SOMETHING BY API</h2>
+    <h2>POST: WHEN YOU PUT SOMETHING BY API</h2>
+    <h2>PULL, PUT SEARCH IN W3SCHOOLS, JQUERY AJAX IN W3SCHOOLS GET , POST</h2>
+    <h2>HTTP REQUEST: (PROMISE)REQUEST CAN B FAILUR OR ACCEPTABLE. WHEN API DOES NOT RESPONSE THAN IT WILL GIVE YOU AN ERROR</h2>
+    <h2>CHEEK HTTP STATUS MEANING 404,402,403</h2>
+    <h2>PROMISE = AJAX, JQUERY IN THE PAST FUTURE</h2>
+
+    <ul id="user-container">
+
+    </ul>
+    <script>
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(json => displayUser(json))
+        .catch(error => console.log(error))// YOU CAN MAKE IT ALERT TOO!
+
+        function displayUser(users){
+           
+           const userNames = users.map(user => user.username);
+           const ul = document.getElementById('user-container');
+
+            for (let i = 0; i < userNames.length; i++) {
+                const user = userNames[i];
+               const li = document.createElement('li');
+               li.innerText = user;
+               ul.appendChild(li); 
+            }
+        }
+
+        // const user = {
+        //      id: 245,
+        //      name: 'JOTISH',
+        //      lover: {
+        //          name: 'karina',
+        //          age: 41,
+        //      } ,
+        //      friendsAge: [12,14,16],
+        //      friends: ['kamal', 'jamal', 'samal']};// get data like string
+
+
+        //           //{"id":245,"name":"JOTISH"}
+        // const userJSON = JSON.stringify(user); //JESON stringify  converting 
+        // console.log(userJSON);
+        // const userFromJSON = JSON.parse(userJSON);// converting javascript object from string
+        // console.log(userFromJSON);
+
+        
+    </script>    
+</body>
+</html>
