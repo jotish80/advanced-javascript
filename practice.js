@@ -70,7 +70,7 @@
 // console.log(bigger);
 
 const person = {
-   firstName: 'jotish',
+   firstName: 'Spondon',
    lastName: 'sarker',
    getFullName: function(){
        console.log(this.firstName, this.lastName);
